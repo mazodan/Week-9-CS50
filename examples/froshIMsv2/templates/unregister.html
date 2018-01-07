@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Unregister
+{% endblock %}
+
+{% block body %}
+    <form method="POST" action="{{ url_for('unregister') }}">
+        {% for registrant in rows %}
+            <input type="radio" name="id" value="{{ registrant.id }}"/> {{ registrant.name }} <br>
+        {% endfor %}
+        <input type="submit" value="Submit"/>
+    </form>
+{% endblock %}

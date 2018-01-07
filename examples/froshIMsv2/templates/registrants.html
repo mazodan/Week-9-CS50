@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Registrants
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% for row in rows %}
+            <li>{{ row.name }} from {{ row.school }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

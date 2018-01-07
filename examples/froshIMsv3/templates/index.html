@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Registration
+{% endblock %}
+
+{% block body %}
+<h1>Register for Intrams</h1>
+<br>
+<form method="POST" action="{{ url_for('register') }}">
+    <label for="name">Name: </label>
+    <input type="text" name="name" required/>
+    <select name="school" required>
+        <option>SITE</option>
+        <option>SAS</option>
+        <option>STED</option>
+        <option>SHS</option>
+    </select>
+    <input type="submit" value="Submit"/>
+</form>
+{% endblock %}
