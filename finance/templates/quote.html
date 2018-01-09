@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <h1>Quote stock</h1>
+    <form method="POST" action="{{ url_for('quote') }}">
+        <div class="form-group">
+            <input autofocus class="form-control" name="stock" placeholder="Stock ex. NFLX" type="text"/>
+        </div>
+        <input type="submit" value="Submit"/>
+    </form>
+{% endblock %}
